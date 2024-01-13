@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600;800&display=swap');
+
+body div {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.main-presentation{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
