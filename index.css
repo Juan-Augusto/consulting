@@ -1,12 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600;800&display=swap');
 
-body div {
+:root{
+    --hue: 192;
+    --text-color-light: #fff;
+    --text-color-dark: #000;
+    --base-color: hsl(var(--hue) 50% 59%);
+    --button-main: hsl(var(--hue) 75% 45%)
+
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background: none;
+}
+button:hover{
+    transform: scale(1.5);
+    transition: all ease-in-out .3s;
+
+}
+
+
+i{
+    color: var(--text-color-dark);
+    font-size: 24px;
+}
+
+body div, section  {
     font-family: 'Source Code Pro', monospace;
 }
 
-.main-presentation{
+.flex{
     display: flex;
     justify-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+.main-presentation{
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+}
+
+.main-presentation, .contact h3, h2{
+    text-align: center;
+}
+
+.contact{
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact div{
+    padding: 5px;
+    border-radius: 4px;
+    max-width: 50%;
+    background-color: var(--button-main);
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact div:hover {
+    background-color: var(--button-main)
+}
+
+.contact div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+    opacity: 0;
+    transform: scale(0);
+    animation: pulsate 1.5s infinite;
+    transition: opacity 0.3s;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.5;
+        transform: translate(-0%, -100%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-0%, -0%) scale(1.5);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translate(-0%, -100%) scale(1);
+    }
+    
+}
+
+
+
+
