@@ -1,112 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600;800&display=swap");
 
-:root{
-    --hue: 192;
-    --text-color-light: #fff;
-    --text-color-dark: #000;
-    --base-color: hsl(var(--hue) 50% 59%);
-    --button-main: hsl(var(--hue) 75% 45%)
-
+:root {
+  --hue: 192;
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+  --base-color: hsl(var(--hue) 50% 59%);
+  --button-main: hsl(var(--hue) 75% 45%);
 }
 
-button{
-    border: none;
-    border-radius: 5px;
-    background: none;
-}
-button:hover{
-    transform: scale(1.5);
-    transition: all ease-in-out .3s;
-
+button {
+  border: none;
+  border-radius: 5px;
+  background: none;
 }
 
-
-i{
-    color: var(--text-color-dark);
-    font-size: 24px;
+.styled-button {
+  background-color: var(--button-main);
+  color: var(--text-color-light);
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
-body div, section  {
-    font-family: 'Source Code Pro', monospace;
+a {
+  text-decoration: none !important;
+}
+button:hover {
+  transform: scale(1.5);
+  transition: all ease-in-out 0.3s;
 }
 
-.flex{
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    flex-direction: column;
+i {
+  margin: 0.5em 0;
+  color: var(--text-color-dark);
+  font-size: 3em;
 }
 
-.main-presentation{
-    background-color: var(--base-color);
-    color: var(--text-color-light);
+body div,
+section {
+  font-family: "Source Code Pro", monospace;
 }
 
-.main-presentation, .contact h3, h2{
-    text-align: center;
+.styled-background {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
 }
 
-.contact{
-    display: flex;
-    margin-top: 5px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+/* .card:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
+} */
+
+p.card-text {
+  text-align: justify;
 }
 
-.contact div{
-    padding: 5px;
-    border-radius: 4px;
-    max-width: 50%;
-    background-color: var(--button-main);
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
+.flex-column {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0.3em 0;
+}
+
+.main-presentation,
+.contact h3,
+h2 {
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.contact div {
+  padding: 5px;
+  border-radius: 4px;
+  max-width: 50%;
+  background-color: var(--button-main);
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
 .contact div:hover {
-    background-color: var(--button-main)
+  background-color: var(--button-main);
 }
 
-.contact div::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: inherit;
-    opacity: 0;
-    transform: scale(0);
-    animation: pulsate 1.5s infinite;
-    transition: opacity 0.3s;
+.contact div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0);
+  animation: pulsate 1.5s infinite;
+  transition: opacity 0.3s;
 }
 
 @keyframes pulsate {
-    0% {
-        opacity: 0.5;
-        transform: translate(-0%, -100%) scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: translate(-0%, -0%) scale(1.5);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translate(-0%, -100%) scale(1);
-    }
-    
+  0% {
+    opacity: 0.5;
+    transform: translate(-0%, -100%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-0%, -0%) scale(1.5);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translate(-0%, -100%) scale(1);
+  }
 }
 
-
-
-
+.card-body {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
