@@ -6,6 +6,7 @@
   --text-color-dark: #000;
   --base-color: hsl(var(--hue) 50% 59%);
   --button-main: hsl(var(--hue) 75% 45%);
+  --base-border-color: hsl(var(--hue) 10% 45%);
 }
 
 button {
@@ -47,6 +48,18 @@ body div,
 section {
   font-family: "Source Code Pro", monospace;
 }
+
+.about-me{
+  margin: 2em 1em;
+  border: solid 2px var(--base-border-color);
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.profile-pic{
+  clip-path: circle();
+}
+
 
 .styled-background {
   background-color: var(--base-color);
@@ -150,4 +163,19 @@ h2 {
   justify-items: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+
+.faq{
+  padding: 1em;
+}
+
+.faq h2{
+  font-weight: bold;
+  font-size: larger;
+  text-align: justify;
+}
+
+.faq div div.card{
+  margin: 1em;
 }
